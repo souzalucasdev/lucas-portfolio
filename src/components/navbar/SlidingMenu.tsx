@@ -11,7 +11,7 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
     return (
       <div
         ref={ref}
-        className={`fixed top-0 right-0 h-full bg-gray-900 text-white w-64 transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 right-0 h-full bg-black text-white w-64 transition-transform duration-500 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -22,7 +22,7 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
           &times;
         </button>
         <nav className='mt-20 flex flex-col items-center space-y-4'>
-          <Link href='#about' className='hover:text-indigo-500'>
+          <Link href='#about' className='hover:text-accent'>
             About
           </Link>
           <Link href='#projects' className='hover:text-indigo-500'>

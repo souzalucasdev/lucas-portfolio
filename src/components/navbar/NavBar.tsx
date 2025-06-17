@@ -30,19 +30,20 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className='flex flex-col'>
-      <div className='flex-start'>
-        <span className='' onClick={toggleMenu}>
-          <Image
-            src='/hamburger-menu.svg'
-            alt='hamburger menu icon'
-            height={40}
-            width={40}
-          />
+    <div className='lg:w-20 flex flex-col sticky no-scroll p-4 cursor-pointer bg-white/10 rounded-xl'>
+      <div className='flex justify-center' onClick={toggleMenu}>
+        <Image
+          src='/hamburger-menu.svg'
+          alt='hamburger menu icon'
+          height={40}
+          width={40}
+        />
+      </div>
+      <div className='flex justify-center items-center h-full'>
+        <span className='absolute rotate-90 text-gray-500 font-bold'>
+          Navbar
         </span>
       </div>
-
-      <span className=' rotate-90'>Navbar</span>
       <SlidingMenu
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}

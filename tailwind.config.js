@@ -1,8 +1,16 @@
 export default {
   theme: {
-    colors: { 'custom-dark': 'rgb(18, 18, 18)' },
+    backgroundImage: {
+      'field-lines': "url('/assets/field-marks.svg')",
+    },
+    colors: {
+      'custom-green-500': '#fffff',
+      'custom-green-400': '#94d9ba',
+    },
     extend: {
-      fontFamily: {},
+      fontFamily: {
+        anta: ['var(--font-anta)', 'sans-serif'],
+      },
     },
   },
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
