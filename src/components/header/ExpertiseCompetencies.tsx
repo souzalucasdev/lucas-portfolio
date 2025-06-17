@@ -3,7 +3,7 @@ import LinearProgressWithLabel from './LinearProgressWithLabel';
 const ExpertiseCompetencies = () => {
   return (
     <>
-      <div>Expertise and Competencies</div>
+      <div className='text-white'>Expertise and Competencies</div>
       <LinearProgressWithLabel value={50} />
     </>
   );

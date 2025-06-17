@@ -22,8 +22,8 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           width={100}
           height={100}
         />
-        <p className='font-bold p-1 mt-3'>Lucas Souza</p>
-        <p className='p-1 text-sm text-center'>
+        <p className='font-bold p-1 mt-3 text-white'>Lucas Souza</p>
+        <p className='p-1 text-sm text-center text-white'>
           React | NextJS | Typescript | Tailwind
         </p>
       </div>

@@ -20,7 +20,7 @@ const Languages = () => {
 
   return (
     <div className='p-4'>
-      <p className='font-bold px-1 mb-2'>Languages</p>
+      <p className='font-bold px-1 mb-2 text-white'>Languages</p>
       <div className='flex justify-center items-center border-b border-white pb-4'>
         <ProgressWithLabel value={portuguese} label={'Portuguese'} />
         <ProgressWithLabel value={english} label={'English'} />

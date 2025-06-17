@@ -34,7 +34,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ label, link, icon }) => {
     <Link href={link} className=''>
       <div
         className={`flex items-center justify-start p-2 rounded-xl mb-4 ${
-          isActive ? 'bg-green-500 text-white' : 'text-gray-600'
+          isActive ? 'bg-green-500 text-black' : 'text-white'
         }`}
       >
         {IconComponent && <IconComponent className='mr-2' />}

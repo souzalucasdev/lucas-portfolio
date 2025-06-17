@@ -22,7 +22,7 @@ const Main: React.FC<MainProps> = ({ className }) => (
       >
         <div className='bg-black/60 p-4 m-3 h-full rounded-xls'>
           <h2 className='text-4xl font-bold text-white'>CHECK THIS OUT!</h2>
-          <p className='mb-4'>
+          <p className='mb-4 text-white'>
             <span>
               {`${openAngleBracket}`}
               <span style={{ color: '#1FDF64' }} className='font-bold'>

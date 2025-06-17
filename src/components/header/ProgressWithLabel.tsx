@@ -44,7 +44,7 @@ const ProgressWithLabel: React.FC<CircularProgressWithLabelProps> = ({
           </Typography>
         </Box>
       </Box>
-      <p className='text-center mt-2 text-sm'>{label}</p>
+      <p className='text-center mt-2 text-sm text-white'>{label}</p>
     </div>
   );
 };
