@@ -21,9 +21,7 @@ const Main: React.FC<MainProps> = ({ className }) => (
         style={{ backgroundImage: "url('/background.png')" }}
       >
         <div className='bg-black/60 p-4 m-3 h-full rounded-xls'>
-          <h2 className='text-4xl font-bold text-custom-green-500'>
-            CHECK THIS OUT!
-          </h2>
+          <h2 className='text-4xl font-bold text-white'>CHECK THIS OUT!</h2>
           <p className='mb-4'>
             <span>
               {`${openAngleBracket}`}
