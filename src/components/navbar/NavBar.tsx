@@ -3,15 +3,37 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import SlidingMenu from './SlidingMenu';
+import MenuIcon from '@mui/icons-material/Menu';
 
-const NavBar = () => {
+interface NavBarProps {
+  className?: string;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ className }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); // For responsive checks
 
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setIsAnimating((prev) => !prev);
+  }, []);
+
+  // Check if the screen is mobile
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsMobile(true); // If screen size is smaller than 768px, it's mobile
+      } else {
+        setIsMobile(false); // For larger screens, it's not mobile
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call initially to check screen size
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const toggleMenu = () => {
@@ -30,25 +52,25 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className='lg:w-20 flex flex-col sticky no-scroll p-4 cursor-pointer bg-white/10 rounded-xl'>
-      <div className='flex justify-center' onClick={toggleMenu}>
-        <Image
-          src='/hamburger-menu.svg'
-          alt='hamburger menu icon'
-          height={40}
-          width={40}
-        />
-      </div>
+    <div
+      className={`${className} lg:w-20 flex flex-col sticky no-scroll p-4 cursor-pointer bg-white/10 rounded-xl items-center`}
+    >
+      <MenuIcon className='text-green-500' onClick={toggleMenu} />
       <div className='flex justify-center items-center h-full'>
-        <span className='absolute rotate-90 text-gray-500 font-bold'>
-          Navbar
+        <span className='absolute rotate-90 text-gray-600 font-bold text-xl'>
+          NavBar
         </span>
       </div>
-      <SlidingMenu
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        ref={menuRef}
-      />
+
+      {isMenuOpen && (
+        <div className='fixed top-0 right-0 z-50 w-64 bg-gray-900 p-4 h-full'>
+          <SlidingMenu
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
+            ref={menuRef}
+          />
+        </div>
+      )}
     </div>
   );
 };

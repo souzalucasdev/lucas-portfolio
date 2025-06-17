@@ -1,14 +1,20 @@
 'use client';
 
-import Image from 'next/image';
 import Footer from '@/components/main/Footer';
 import { ReactTyped } from 'react-typed';
 import Expertise from './Expertise';
+import { Button } from '@mui/material';
 
 const openAngleBracket = '<';
 const closingAngleBracket = '>';
-const Main = () => (
-  <div className='flex flex-col min-h-screen p-4 w-full rounded-xl overflow-scroll scrollbar-hidden'>
+
+interface MainProps {
+  className?: string;
+}
+const Main: React.FC<MainProps> = ({ className }) => (
+  <div
+    className={`${className} flex flex-col min-h-screen lg:p-4 w-full rounded-xl overflow-scroll scrollbar-hidden`}
+  >
     <section id='' className='flex-grow bg-white/10'>
       <div
         className='w-full h-50 bg-cover bg-no-repeat bg-center flex flex-col'
@@ -32,11 +38,11 @@ const Main = () => (
                 'I have NextJS experience.',
                 'I also have experience with Tailwind CSS!',
               ]}
-              typeSpeed={50} // Adjust speed of typing effect
-              backSpeed={30} // Adjust backspacing speed
-              backDelay={1000} // Delay before typing backwards
-              startDelay={500} // Delay before typing starts
-              loop // Loop the typing effect
+              typeSpeed={50}
+              backSpeed={30}
+              backDelay={1000}
+              startDelay={500}
+              loop
             />
             <span>
               {`${openAngleBracket}/`}
@@ -46,13 +52,14 @@ const Main = () => (
               {`${closingAngleBracket}`}
             </span>
           </p>
+          <Button variant='contained'>Explore</Button>
         </div>
       </div>
-      <div className='px-6 mt-6 text-center flex flex-col'>
+      <div className='px-2 lg:px-6 mt-6 text-center flex flex-col'>
         <h3 className='text-left text-lg font-semibold text-white flex-start'>
           My Expertise
         </h3>
-        <div className='flex justify-between mt-4 grid grid-cols-3 gap-4'>
+        <div className='flex justify-between mt-4 grid lg:grid-cols-3 grid-cols-1 gap-4'>
           <Expertise
             title={'React Development'}
             description={

@@ -13,7 +13,7 @@ const ProgressWithLabel: React.FC<CircularProgressWithLabelProps> = ({
   label,
 }) => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col p-4'>
       <Box position='relative' display='inline-flex'>
         <CircularProgress
           variant='determinate'
@@ -22,6 +22,7 @@ const ProgressWithLabel: React.FC<CircularProgressWithLabelProps> = ({
             color: '#1FDF64',
             strokeLinecap: 'round',
           }}
+          size={80}
         />
         <Box
           top={0}
@@ -33,12 +34,17 @@ const ProgressWithLabel: React.FC<CircularProgressWithLabelProps> = ({
           alignItems='center'
           justifyContent='center'
         >
-          <Typography variant='caption' component='div' color='white'>
+          <Typography
+            variant='caption'
+            component='div'
+            color='white'
+            sx={{ fontSize: '20px' }}
+          >
             {`${Math.round(value)}%`}
           </Typography>
         </Box>
       </Box>
-      <p className='text-center'>{label}</p>
+      <p className='text-center mt-2 text-sm'>{label}</p>
     </div>
   );
 };
