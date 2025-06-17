@@ -11,7 +11,7 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
     return (
       <div
         ref={ref}
-        className={` flex justify-center items-center fixed top-0 right-0 h-full bg-black text-white w-64 transition-transform duration-500 ease-in-out ${
+        className={`flex justify-center items-center fixed top-0 right-0 h-full bg-black text-white w-64 transition-transform duration-500 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -31,5 +31,7 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
     );
   }
 );
+
+SlidingMenu.displayName = 'SlidingMenu';
 
 export default SlidingMenu;

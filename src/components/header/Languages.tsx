@@ -4,7 +4,6 @@ import ProgressWithLabel from './ProgressWithLabel';
 const Languages = () => {
   const [portuguese, setportuguese] = useState(0);
   const [english, setEnglish] = useState(0);
-  const [french, setFrench] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -17,7 +16,7 @@ const Languages = () => {
     }, 30);
 
     return () => clearInterval(timer);
-  }, [portuguese, english, french]);
+  }, [portuguese, english]);
 
   return (
     <div className='p-4'>

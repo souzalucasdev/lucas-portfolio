@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import SlidingMenu from './SlidingMenu';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -10,15 +9,10 @@ interface NavBarProps {
 }
 
 const NavBar: React.FC<NavBarProps> = ({ className }) => {
-  const [isAnimating, setIsAnimating] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false); // For responsive checks
 
   const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    setIsAnimating((prev) => !prev);
-  }, []);
 
   // Check if the screen is mobile
   useEffect(() => {

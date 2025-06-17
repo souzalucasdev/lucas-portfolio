@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react'; // Import useState and useEffect
 import { Home, Contacts, PermIdentity, Badge } from '@mui/icons-material';
 
