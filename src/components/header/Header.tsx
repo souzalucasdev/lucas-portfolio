@@ -1,8 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import ProgressWithLabel from './ProgressWithLabel';
-import { useEffect, useState } from 'react';
 import ResidenceAge from './ResidenceAge';
 import ExpertiseCompetencies from './ExpertiseCompetencies';
 import Languages from './Languages';
