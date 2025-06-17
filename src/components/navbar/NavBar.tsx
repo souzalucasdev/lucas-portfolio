@@ -55,21 +55,25 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
     <div
       className={`${className} lg:w-20 flex flex-col sticky no-scroll p-4 cursor-pointer bg-white/10 rounded-xl items-center`}
     >
-      <MenuIcon className='text-green-500' onClick={toggleMenu} />
-      <div className='flex justify-center items-center h-full'>
-        <span className='absolute rotate-90 text-gray-600 font-bold text-xl'>
-          NavBar
-        </span>
-      </div>
+      {!isMobile && (
+        <>
+          <MenuIcon className='text-green-500' onClick={toggleMenu} />
+          <div className='flex justify-center items-center h-full'>
+            <span className='absolute rotate-90 text-gray-600 font-bold text-xl'>
+              NavBar
+            </span>
+          </div>
 
-      {isMenuOpen && (
-        <div className='fixed top-0 right-0 z-50 w-64 bg-gray-900 p-4 h-full'>
-          <SlidingMenu
-            isMenuOpen={isMenuOpen}
-            setIsMenuOpen={setIsMenuOpen}
-            ref={menuRef}
-          />
-        </div>
+          {isMenuOpen && (
+            <div className='fixed top-0 right-0 z-50 w-64 bg-gray-900 p-4 h-full'>
+              <SlidingMenu
+                isMenuOpen={isMenuOpen}
+                setIsMenuOpen={setIsMenuOpen}
+                ref={menuRef}
+              />
+            </div>
+          )}
+        </>
       )}
     </div>
   );

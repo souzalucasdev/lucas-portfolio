@@ -1,5 +1,5 @@
 import React, { ForwardedRef } from 'react';
-import Link from 'next/link';
+import LinkButton from './LinkButton';
 
 interface SlidingMenuProps {
   isMenuOpen: boolean;
@@ -11,7 +11,7 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
     return (
       <div
         ref={ref}
-        className={`fixed top-0 right-0 h-full bg-black text-white w-64 transition-transform duration-500 ease-in-out ${
+        className={` flex justify-center items-center fixed top-0 right-0 h-full bg-black text-white w-64 transition-transform duration-500 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -21,17 +21,12 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
         >
           &times;
         </button>
-        <nav className='mt-20 flex flex-col items-center space-y-4'>
-          <Link href='#about' className='hover:text-accent'>
-            About
-          </Link>
-          <Link href='#projects' className='hover:text-indigo-500'>
-            Projects
-          </Link>
-          <Link href='#contact' className='hover:text-indigo-500'>
-            Contact
-          </Link>
-        </nav>
+        <div className='flex flex-col'>
+          <LinkButton icon='home' link='/' label='Home' />
+          <LinkButton icon='contact' link='/contacts' label='Contact' />
+          <LinkButton icon='background' link='/background' label='Background' />
+          <LinkButton icon='portfolio' link='/portfolio' label='Portfolio' />
+        </div>
       </div>
     );
   }

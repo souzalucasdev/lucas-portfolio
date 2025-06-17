@@ -24,7 +24,7 @@ const Main: React.FC<MainProps> = ({ className }) => (
           <h2 className='text-4xl font-bold text-custom-green-500'>
             CHECK THIS OUT!
           </h2>
-          <p>
+          <p className='mb-4'>
             <span>
               {`${openAngleBracket}`}
               <span style={{ color: '#1FDF64' }} className='font-bold'>
@@ -36,7 +36,7 @@ const Main: React.FC<MainProps> = ({ className }) => (
               strings={[
                 'I am a React developer!',
                 'I have NextJS experience.',
-                'I also have experience with Tailwind CSS!',
+                'I also have Tailwind experience!',
               ]}
               typeSpeed={50}
               backSpeed={30}
