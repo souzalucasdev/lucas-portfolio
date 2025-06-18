@@ -1,11 +1,12 @@
 import Link from 'next/link';
-import { useState, useEffect } from 'react'; // Import useState and useEffect
+import { useState, useEffect } from 'react';
 import { Home, Contacts, PermIdentity, Badge } from '@mui/icons-material';
 
 interface LinkButtonProps {
   label: string;
   link: string;
   icon: string;
+  onClick: () => void;
 }
 
 const iconMapping: Record<string, React.ElementType> = {
@@ -15,15 +16,19 @@ const iconMapping: Record<string, React.ElementType> = {
   portfolio: Badge,
 };
 
-const LinkButton: React.FC<LinkButtonProps> = ({ label, link, icon }) => {
-  const [isMounted, setIsMounted] = useState(false); // Track component mounting
+const LinkButton: React.FC<LinkButtonProps> = ({
+  label,
+  link,
+  icon,
+  onClick,
+}) => {
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Initialize router only on the client
   const [pathname, setPathname] = useState('');
 
   useEffect(() => {
     setIsMounted(true);
-    setPathname(window.location.pathname); // Set pathname after mount
+    setPathname(window.location.pathname);
   }, []);
 
   const isActive = isMounted && pathname === link;
@@ -31,7 +36,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ label, link, icon }) => {
   const IconComponent = iconMapping[icon];
 
   return (
-    <Link href={link} className=''>
+    <Link href={link} className='' onClick={onClick}>
       <div
         className={`flex items-center justify-start p-2 rounded-xl mb-4 ${
           isActive ? 'bg-green-500 text-black' : 'text-white'
