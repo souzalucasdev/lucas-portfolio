@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState, useEffect } from 'react'; // Import useState and useEffect
+import { useState, useEffect } from 'react';
 import { Home, Contacts, PermIdentity, Badge } from '@mui/icons-material';
 
 interface LinkButtonProps {
@@ -16,14 +16,13 @@ const iconMapping: Record<string, React.ElementType> = {
 };
 
 const LinkButton: React.FC<LinkButtonProps> = ({ label, link, icon }) => {
-  const [isMounted, setIsMounted] = useState(false); // Track component mounting
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Initialize router only on the client
   const [pathname, setPathname] = useState('');
 
   useEffect(() => {
     setIsMounted(true);
-    setPathname(window.location.pathname); // Set pathname after mount
+    setPathname(window.location.pathname);
   }, []);
 
   const isActive = isMounted && pathname === link;

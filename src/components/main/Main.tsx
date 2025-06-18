@@ -23,7 +23,7 @@ const Main: React.FC<MainProps> = ({ className }) => (
         }}
       >
         <div className='bg-black/60 p-4 m-3 h-full rounded-xl'>
-          <h2 className='text-4xl font-bold text-white'>HELLO, VISITOR!!</h2>
+          <h2 className='text-4xl font-bold text-white'>HELLO, VISITOR!</h2>
           <p className='mb-4 text-white'>
             <span>
               {`${openAngleBracket}`}

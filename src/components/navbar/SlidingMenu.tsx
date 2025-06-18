@@ -23,7 +23,7 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
         </button>
         <div className='flex flex-col'>
           <LinkButton icon='home' link='/' label='Home' />
-          <LinkButton icon='contact' link='/contacts' label='Contact' />
+          <LinkButton icon='contact' link='/contact' label='Contact' />
           <LinkButton icon='background' link='/background' label='Background' />
           <LinkButton icon='portfolio' link='/portfolio' label='Portfolio' />
         </div>
