@@ -13,7 +13,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
     <div
-      className={`${className} flex flex-col h-screen lg:w-90 w-80 lg:bg-white/10 bg-black rounded-xl overflow-scroll scrollbar-hidden`}
+      className={`${className} flex flex-col h-screen lg:w-90 w-80 lg:bg-white/10 bg-black rounded-xl`}
     >
       <div className='flex flex-col justify-center items-center mb-4 bg-white/2 p-4 rounded-t-xl'>
         <Image
@@ -28,10 +28,12 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           React | NextJS | Typescript | Tailwind
         </p>
       </div>
-      <ResidenceAge />
-      <Languages />
-      <ExpertiseCompetencies />
-      <Tools />
+      <div className='overflow-scroll scrollbar-hidden'>
+        <ResidenceAge />
+        <Languages />
+        <ExpertiseCompetencies />
+        <Tools />
+      </div>
     </div>
   );
 };

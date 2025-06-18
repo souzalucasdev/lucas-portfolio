@@ -13,7 +13,7 @@ interface MainProps {
 }
 const Main: React.FC<MainProps> = ({ className }) => (
   <div
-    className={`${className} flex flex-col min-h-screen lg:p-4 w-full rounded-xl overflow-scroll scrollbar-hidden`}
+    className={`${className} flex flex-col min-h-screen lg:p-4 w-full rounded-xl scrollbar-hidden`}
   >
     <section id='' className='flex-grow bg-white/10'>
       <div
@@ -22,7 +22,7 @@ const Main: React.FC<MainProps> = ({ className }) => (
       >
         <div className='bg-black/60 p-4 m-3 h-full rounded-xls'>
           <h2 className='text-4xl font-bold text-white'>CHECK THIS OUT!</h2>
-          <p className='mb-4 text-white'>
+          <p className='mb-4'>
             <span>
               {`${openAngleBracket}`}
               <span style={{ color: '#1FDF64' }} className='font-bold'>

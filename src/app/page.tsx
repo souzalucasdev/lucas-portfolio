@@ -39,7 +39,10 @@ export default function Home() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const blurBg = isHeaderOpen || isNavBarOpen ? 'blur-sm' : '';
+  const blurBg =
+    isHeaderOpen || isNavBarOpen
+      ? 'blur-sm overflow-hidden'
+      : 'overflow-scroll';
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -63,7 +66,7 @@ export default function Home() {
         )}
         <Header className='md:flex md:w-[300px] hidden' />
 
-        <Main className={`flex-1 overflow-auto ${blurBg}`} />
+        <Main className={`flex-1 ${blurBg}`} />
 
         {isNavBarOpen && (
           <div
