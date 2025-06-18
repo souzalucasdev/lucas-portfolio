@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <div
-        className={`bg-black flex w-full h-screen lg:p-[0.8rem] overflow-hidden flex-col md:flex-row`}
+        className={`bg-black flex w-full h-screen lg:p-[0.8rem] flex-col md:flex-row gap-4`}
       >
         <div className='md:hidden flex justify-between items-center p-2'>
           <MoreVertIcon
@@ -66,7 +66,7 @@ export default function Home() {
         )}
         <Header className='md:flex md:w-[300px] hidden' />
 
-        <Main className={`flex-1 ${blurBg}`} />
+        <Main className={`${blurBg}`} />
 
         {isNavBarOpen && (
           <div

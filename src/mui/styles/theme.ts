@@ -11,7 +11,13 @@ const theme = createTheme({
         root: {
           color: 'black',
           fontWeight: 500,
-          backgroundColor: 'lightGreen',
+          backgroundColor: '#1FDF64',
+          borderRadius: '0.875rem',
+
+          paddingRight: '1.5rem',
+          paddingLeft: '1.5rem',
+
+          textTransform: 'none',
         },
       },
     },

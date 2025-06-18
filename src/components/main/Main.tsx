@@ -13,15 +13,17 @@ interface MainProps {
 }
 const Main: React.FC<MainProps> = ({ className }) => (
   <div
-    className={`${className} flex flex-col min-h-screen lg:p-4 w-full rounded-xl scrollbar-hidden`}
+    className={`${className} flex flex-col h-full  w-full rounded-xl scrollbar-hidden bg-white/10`}
   >
-    <section id='' className='flex-grow bg-white/10'>
+    <section id='' className='flex-grow'>
       <div
         className='w-full h-50 bg-cover bg-no-repeat bg-center flex flex-col'
-        style={{ backgroundImage: "url('/background.png')" }}
+        style={{
+          backgroundImage: "url('/background.png')",
+        }}
       >
         <div className='bg-black/60 p-4 m-3 h-full rounded-xl'>
-          <h2 className='text-4xl font-bold text-white'>CHECK THIS OUT!</h2>
+          <h2 className='text-4xl font-bold text-white'>HELLO, VISITOR!</h2>
           <p className='mb-4 text-white'>
             <span>
               {`${openAngleBracket}`}

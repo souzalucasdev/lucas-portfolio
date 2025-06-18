@@ -4,9 +4,9 @@ import Link from 'next/link';
 const DownloadResume = () => {
   return (
     <div className='p-4'>
-      <div className='border-b border-white pb-8 flex'>
+      <div className=' pb-8 flex text-green-500'>
         <Link href='/lucas-souza-resume.pdf' target='_blank'>
-          <span className='text-Snow'>Download Resume</span>
+          <span className='text-white mr-2'>Download Resume</span>
           <Download />
         </Link>
       </div>
