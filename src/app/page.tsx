@@ -1,12 +1,14 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '@/mui/styles/theme';
+
 import Main from '@/components/main/Main';
 import NavBar from '@/components/navbar/NavBar';
 import Header from '@/components/header/Header';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MenuIcon from '@mui/icons-material/Menu';
-import { createTheme, ThemeProvider } from '@mui/material';
 import SlidingMenu from '@/components/navbar/SlidingMenu';
 
 export default function Home() {
@@ -14,27 +16,11 @@ export default function Home() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const navBarRef = useRef<HTMLDivElement>(null);
-  const theme = createTheme({
-    components: {
-      MuiButton: {
-        defaultProps: {
-          disableRipple: true,
-          disableElevation: true,
-        },
-        styleOverrides: {
-          root: {
-            color: 'black',
-            fontWeight: 500,
-            backgroundColor: 'lightGreen',
-          },
-        },
-      },
-    },
-  });
 
   const toggleHeaderDrawer = () => {
     setIsHeaderOpen(!isHeaderOpen);
   };
+
   const toggleNavBarDrawer = () => {
     setIsNavBarOpen(!isNavBarOpen);
   };

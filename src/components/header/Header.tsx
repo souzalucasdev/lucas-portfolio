@@ -12,7 +12,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
     <div
-      className={`${className} flex flex-col h-screen lg:w-90 w-80 lg:bg-white/10 bg-black rounded-xl`}
+      className={`${className} flex flex-col h-screen lg:w-90 w-80 lg:bg-white/10 bg-black rounded-xl overflow-scroll scrollbar-hidden`}
     >
       <div className='flex flex-col justify-center items-center mb-4 bg-white/2 p-4 rounded-t-xl'>
         <Image
