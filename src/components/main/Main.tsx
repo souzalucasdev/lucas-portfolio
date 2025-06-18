@@ -61,27 +61,33 @@ const Main: React.FC<MainProps> = ({ className }) => (
         </h3>
         <div className='flex justify-between mt-4 grid lg:grid-cols-3 grid-cols-1 gap-4'>
           <Expertise
-            title={'React Development'}
+            title={'JavaScript'}
             description={
-              'I am a skilled MERN stack developer with extensive experience in building robust web applications using MongoDB, Express.js, React.js, and Node.js. I possess a strong understanding of server-side rendering, API integration, and database management. With my expertise, I can deliver dynamic and efficient web solutions tailored to meet the unique requirements of clients.'
+              'At the start of my coding journey, I focused on mastering JavaScript fundamentals, which accelerated my path to React, its most popular library. My solid understanding of JavaScript has not only made learning React smoother but also enables me to quickly adapt to other libraries and frameworks with ease.'
+            }
+          />
+          <Expertise
+            title={'React'}
+            description={
+              'With 2.5 years of experience in building React applications, I have developed a strong understanding of component-based architecture, state management, and front-end optimization. Through my past work experiences, I have ensured seamless user experiences, responsive designs, and efficient performance. I am also familiar with server and client components, enhancing scalability and maintainability.'
             }
           />
           <Expertise
             title={'NextJS Framework'}
             description={
-              'React DevelopmentReact DevelopmentReact DevelopmentReact DevelopmentReact Development'
+              'My experience with Next.js has been growing rapidly. In my most recent role, I gained a strong foundation in this powerful framework. I am proud to say that I have successfully built my first Next.js application, which happens to be this website itself, showcasing my progress and newfound skills.'
             }
           />
           <Expertise
-            title={'UX, Figma and CSS Libraries'}
+            title={'Figma'}
             description={
-              'React DevelopmentReact DevelopmentReact DevelopmentReact DevelopmentReact Development'
+              "As a React developer with 2.5 years of experience, I understand the importance of Figma for frontend development. Familiarity with Figma's design-to-development workflow, component libraries, and design systems is crucial. I have hands-on experience using Figma to collaborate with designers, ensuring efficient UI implementation and smooth project handoffs."
             }
           />
           <Expertise
-            title={'UX, Figma and CSS Libraries'}
+            title={'Tailwind CSS'}
             description={
-              'React DevelopmentReact DevelopmentReact DevelopmentReact DevelopmentReact Development'
+              "I'm proficient in using Tailwind CSS to accelerate development. Its utility-first approach allows for rapid prototyping and custom UI design without writing custom CSS. With my experience, I can quickly build responsive and scalable layouts, ensuring efficient styling while maintaining a clean, maintainable codebase for React applications."
             }
           />
         </div>
