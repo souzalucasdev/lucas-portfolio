@@ -2,7 +2,7 @@ const Tools = () => {
   return (
     <div className='p-4'>
       <div className='border-b border-white pb-8'>
-        <div className='text-white'>Tools</div>
+        <div className='text-white mb-2'>Tools</div>
         <div>
           <div className='bg-white/5 rounded-4xl p-2 inline-block text-xs my-2 mr-2 text-white'>
             JavaScript

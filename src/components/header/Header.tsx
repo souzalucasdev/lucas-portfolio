@@ -5,6 +5,7 @@ import ResidenceAge from './ResidenceAge';
 import ExpertiseCompetencies from './ExpertiseCompetencies';
 import Languages from './Languages';
 import Tools from './Tools';
+import EmailPhone from './EmailPhone';
 
 interface HeaderProps {
   className?: string;
@@ -33,6 +34,8 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
         <Languages />
         <ExpertiseCompetencies />
         <Tools />
+        <EmailPhone />
+        <div className='my-48'>SPACER</div>
       </div>
     </div>
   );
