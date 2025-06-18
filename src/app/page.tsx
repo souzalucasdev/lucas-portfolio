@@ -7,8 +7,7 @@ import theme from '@/mui/styles/theme';
 import Main from '@/components/main/Main';
 import NavBar from '@/components/navbar/NavBar';
 import Header from '@/components/header/Header';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import MenuIcon from '@mui/icons-material/Menu';
+import MobileMenu from '@/components/MobileMenu';
 import SlidingMenu from '@/components/navbar/SlidingMenu';
 
 export default function Home() {
@@ -48,13 +47,10 @@ export default function Home() {
       <div
         className={`bg-black flex w-full h-screen lg:p-[0.8rem] flex-col md:flex-row gap-4`}
       >
-        <div className='md:hidden flex justify-between items-center p-2'>
-          <MoreVertIcon
-            className='text-green-500'
-            onClick={toggleHeaderDrawer}
-          />
-          <MenuIcon className='text-green-500' onClick={toggleNavBarDrawer} />
-        </div>
+        <MobileMenu
+          toggleHeaderDrawer={toggleHeaderDrawer}
+          toggleNavBarDrawer={toggleNavBarDrawer}
+        />
 
         {isHeaderOpen && (
           <div
