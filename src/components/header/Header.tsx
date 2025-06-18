@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ResidenceAge from './ResidenceAge';
 import ExpertiseCompetencies from './ExpertiseCompetencies';
 import Languages from './Languages';
+import Tools from './Tools';
 
 interface HeaderProps {
   className?: string;
@@ -30,6 +31,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
       <ResidenceAge />
       <Languages />
       <ExpertiseCompetencies />
+      <Tools />
     </div>
   );
 };
