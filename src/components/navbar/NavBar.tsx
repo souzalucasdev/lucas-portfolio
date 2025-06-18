@@ -10,22 +10,21 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ({ className }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // For responsive checks
+  const [isMobile, setIsMobile] = useState(false);
 
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Check if the screen is mobile
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setIsMobile(true); // If screen size is smaller than 768px, it's mobile
+        setIsMobile(true);
       } else {
-        setIsMobile(false); // For larger screens, it's not mobile
+        setIsMobile(false);
       }
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Call initially to check screen size
+    handleResize();
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -47,11 +46,14 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
 
   return (
     <div
-      className={`${className} lg:w-20 flex flex-col sticky no-scroll p-4 cursor-pointer bg-white/10 rounded-xl items-center`}
+      className={`${className} lg:w-20 flex flex-col sticky no-scroll p-4 bg-white/10 rounded-xl items-center`}
     >
       {!isMobile && (
         <>
-          <MenuIcon className='text-green-500' onClick={toggleMenu} />
+          <MenuIcon
+            className='text-green-500 cursor-pointer'
+            onClick={toggleMenu}
+          />
           <div className='flex justify-center items-center h-full'>
             <span className='absolute rotate-90 text-gray-600 font-bold text-xl'>
               NavBar
