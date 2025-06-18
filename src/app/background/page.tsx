@@ -20,10 +20,10 @@ export default function Background() {
     toggleNavBarDrawer,
   } = useDrawerContext();
 
-  const blurBg =
-    isHeaderOpen || isNavBarOpen
-      ? 'blur-sm overflow-hidden'
-      : 'overflow-scroll';
+  //   const blurBg =
+  //     isHeaderOpen || isNavBarOpen
+  //       ? 'blur-sm overflow-hidden'
+  //       : 'overflow-scroll';
 
   return (
     <ThemeProvider theme={theme}>
