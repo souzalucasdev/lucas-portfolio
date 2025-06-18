@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import ResidenceAge from './ResidenceAge';
 import ExpertiseCompetencies from './ExpertiseCompetencies';
 import Languages from './Languages';
