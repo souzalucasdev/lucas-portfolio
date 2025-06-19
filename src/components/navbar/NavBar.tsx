@@ -3,12 +3,14 @@
 import { useState, useEffect, useRef } from 'react';
 import SlidingMenu from './SlidingMenu';
 import MenuIcon from '@mui/icons-material/Menu';
+import { DrawerProvider } from '@/context/DrawerContext';
 
 interface NavBarProps {
   className?: string;
+  toggleNavBarDrawer: any;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ className }) => {
+const NavBar: React.FC<NavBarProps> = ({ className, toggleNavBarDrawer }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -31,6 +33,7 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
+    toggleNavBarDrawer(true);
   };
 
   useEffect(() => {
@@ -45,33 +48,35 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
   }, []);
 
   return (
-    <div
-      className={`${className} lg:w-20 flex flex-col sticky no-scroll p-4 bg-white/10 rounded-xl items-center`}
-    >
-      {!isMobile && (
-        <>
-          <MenuIcon
-            className='text-green-500 cursor-pointer'
-            onClick={toggleMenu}
-          />
-          <div className='flex justify-center items-center h-full'>
-            <span className='absolute rotate-90 text-gray-600 font-bold text-xl'>
-              NavBar
-            </span>
-          </div>
-
-          {isMenuOpen && (
-            <div className='fixed top-0 right-0 z-50 w-64 bg-gray-900 p-4 h-full'>
-              <SlidingMenu
-                isMenuOpen={isMenuOpen}
-                setIsMenuOpen={setIsMenuOpen}
-                ref={menuRef}
-              />
+    <DrawerProvider>
+      <div
+        className={`${className} lg:w-20 flex flex-col sticky no-scroll p-4 bg-white/10 rounded-xl items-center`}
+      >
+        {!isMobile && (
+          <>
+            <MenuIcon
+              className='text-green-500 cursor-pointer'
+              onClick={toggleMenu}
+            />
+            <div className='flex justify-center items-center h-full'>
+              <span className='absolute rotate-90 text-gray-600 font-bold text-xl'>
+                NavBar
+              </span>
             </div>
-          )}
-        </>
-      )}
-    </div>
+
+            {isMenuOpen && (
+              <div className='fixed top-0 right-0 z-50 w-64 bg-gray-900 p-4 h-full'>
+                <SlidingMenu
+                  isMenuOpen={isMenuOpen}
+                  setIsMenuOpen={setIsMenuOpen}
+                  ref={menuRef}
+                />
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    </DrawerProvider>
   );
 };
 
