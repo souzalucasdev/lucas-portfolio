@@ -22,7 +22,7 @@ export default function ContactPage() {
 
   const blurBg =
     isHeaderOpen || isNavBarOpen
-      ? 'blur-sm overflow-hidden'
+      ? 'blur-sm overflow-hidden pointer-events-none'
       : 'overflow-scroll';
 
   console.log('isNavOpen: ', isNavBarOpen);
@@ -34,7 +34,7 @@ export default function ContactPage() {
         toggleNavBarDrawer={toggleNavBarDrawer}
       />
       <div
-        className={`bg-black flex w-full h-screen lg:p-[0.8rem] flex-col md:flex-row gap-4 bg-white/10`}
+        className={`bg-black flex w-screen h-screen lg:p-[0.8rem] flex-col md:flex-row gap-4`}
       >
         {isHeaderOpen && (
           <div
@@ -45,7 +45,7 @@ export default function ContactPage() {
           </div>
         )}
 
-        <Header className='md:flex md:w-[300px] hidden' />
+        <Header className={`${blurBg} md:flex md:w-[300px] hidden`} />
         <Contact className={blurBg} />
 
         {isNavBarOpen && (

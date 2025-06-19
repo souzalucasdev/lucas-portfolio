@@ -27,7 +27,7 @@ const Main: React.FC<MainProps> = ({ className }) => {
   };
   return (
     <div
-      className={`${className} flex flex-col h-full  w-full rounded-xl scrollbar-hidden bg-white/10`}
+      className={`${className} flex flex-col h-full w-full rounded-xl scrollbar-hidden bg-white/10`}
     >
       <section id='' className='flex-grow'>
         <div

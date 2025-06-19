@@ -16,7 +16,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
     <div
-      className={`${className} flex flex-col h-full lg:w-90 w-80 lg:bg-white/10 bg-black rounded-xl`}
+      className={`${className} flex flex-col h-full lg:w-90 w-80 lg:bg-white/10 bg-black rounded-xl scrollbar-hidden`}
     >
       <div className='overflow-scroll scrollbar-hidden'>
         <AvatarWithInfo />

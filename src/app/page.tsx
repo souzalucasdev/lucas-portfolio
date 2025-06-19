@@ -40,7 +40,7 @@ export default function Home() {
 
   const blurBg =
     isHeaderOpen || isNavBarOpen
-      ? 'blur-sm overflow-hidden'
+      ? 'blur-sm overflow-hidden pointer-events-none'
       : 'overflow-scroll';
   return (
     <ThemeProvider theme={theme}>
@@ -60,7 +60,7 @@ export default function Home() {
             <Header />
           </div>
         )}
-        <Header className='md:flex md:w-[300px] hidden' />
+        <Header className={`${blurBg} md:flex md:w-[300px] hidden`} />
 
         <Main className={`${blurBg}`} />
 
