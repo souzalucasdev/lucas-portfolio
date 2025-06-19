@@ -32,8 +32,6 @@ const Recommendations = () => {
     return <div>Error fetching recommendations.</div>;
   }
 
-  console.log('data: ', data);
-
   return (
     <div className=''>
       <div className='mt-6 text-lg font-bold text-white text-left'>

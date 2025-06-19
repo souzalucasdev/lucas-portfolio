@@ -5,6 +5,7 @@ import { ReactTyped } from 'react-typed';
 import Expertise from './Expertise';
 import { Button } from '@mui/material';
 import Recommendations from './recommendations/Recommendations';
+import Image from 'next/image';
 
 const openAngleBracket = '<';
 const closingAngleBracket = '>';
@@ -18,7 +19,7 @@ const Main: React.FC<MainProps> = ({ className }) => (
   >
     <section id='' className='flex-grow'>
       <div
-        className='w-full h-50 bg-cover bg-no-repeat bg-center flex flex-col'
+        className='w-full h-50 bg-cover bg-no-repeat bg-center flex flex-col relative'
         style={{
           backgroundImage: "url('/background.png')",
         }}
@@ -55,6 +56,13 @@ const Main: React.FC<MainProps> = ({ className }) => (
           </p>
           <Button variant='contained'>Explore</Button>
         </div>
+        <Image
+          alt='lucas memoji'
+          src='/memoji1.png'
+          height={150}
+          width={150}
+          className='absolute bottom-0 right-30 mb-4 mr-4 hidden lg:block'
+        />
       </div>
       <div className='px-2 lg:px-6 text-center flex flex-col'>
         <h3 className='mt-6 text-left text-lg font-semibold text-white flex-start'>
