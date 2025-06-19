@@ -4,6 +4,7 @@ import Footer from '@/components/main/Footer';
 import { ReactTyped } from 'react-typed';
 import Expertise from './Expertise';
 import { Button } from '@mui/material';
+import Recommendations from './recommendations/Recommendations';
 
 const openAngleBracket = '<';
 const closingAngleBracket = '>';
@@ -55,17 +56,11 @@ const Main: React.FC<MainProps> = ({ className }) => (
           <Button variant='contained'>Explore</Button>
         </div>
       </div>
-      <div className='px-2 lg:px-6 mt-6 text-center flex flex-col'>
-        <h3 className='text-left text-lg font-semibold text-white flex-start'>
+      <div className='px-2 lg:px-6 text-center flex flex-col'>
+        <h3 className='mt-6 text-left text-lg font-semibold text-white flex-start'>
           My Expertise
         </h3>
         <div className='flex justify-between mt-4 grid lg:grid-cols-3 grid-cols-1 gap-4'>
-          <Expertise
-            title={'JavaScript'}
-            description={
-              'At the start of my coding journey, I focused on mastering JavaScript fundamentals, which accelerated my path to React, its most popular library. My solid understanding of JavaScript has not only made learning React smoother but also enables me to quickly adapt to other libraries and frameworks with ease.'
-            }
-          />
           <Expertise
             title={'React'}
             description={
@@ -73,7 +68,13 @@ const Main: React.FC<MainProps> = ({ className }) => (
             }
           />
           <Expertise
-            title={'NextJS Framework'}
+            title={'JavaScript'}
+            description={
+              'At the start of my coding journey, I focused on mastering JavaScript fundamentals, which accelerated my path to React, its most popular library. My solid understanding of JavaScript has not only made learning React smoother but also enables me to quickly adapt to other libraries and frameworks with ease.'
+            }
+          />
+          <Expertise
+            title={'NextJS'}
             description={
               'My experience with Next.js has been growing rapidly. In my most recent role, I gained a strong foundation in this powerful framework. I am proud to say that I have successfully built my first Next.js application, which happens to be this website itself, showcasing my progress and newfound skills.'
             }
@@ -91,6 +92,8 @@ const Main: React.FC<MainProps> = ({ className }) => (
             }
           />
         </div>
+
+        <Recommendations />
 
         <div className='mt-8 flex justify-center'></div>
       </div>
