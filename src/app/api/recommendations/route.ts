@@ -9,8 +9,6 @@ type Recommendation = {
   linkednURL: string;
 };
 
-type ResponseData = Recommendation[];
-
 const recommendationCard: Recommendation[] = [
   {
     id: 0,
@@ -31,7 +29,7 @@ const recommendationCard: Recommendation[] = [
   },
 ];
 
-export async function GET(req: NextApiRequest) {
+export async function GET() {
   try {
     return new Response(JSON.stringify(recommendationCard), {
       status: 200,
