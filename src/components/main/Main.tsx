@@ -27,7 +27,7 @@ const Main: React.FC<MainProps> = ({ className }) => {
   };
   return (
     <div
-      className={`${className} flex flex-col h-full w-full rounded-xl scrollbar-hidden bg-white/10`}
+      className={`${className} flex flex-col h-full w-full rounded-xl scrollbar-hidden bg-custom-green-500`}
     >
       <section id='' className='flex-grow'>
         <div
@@ -36,7 +36,7 @@ const Main: React.FC<MainProps> = ({ className }) => {
             backgroundImage: "url('/background.png')",
           }}
         >
-          <div className='bg-black/60 p-4 m-3 h-full rounded-xl'>
+          <div className='bg-color-avocado-100 p-4 m-3 h-full rounded-xl'>
             <h2 className='text-4xl font-bold text-white'>HELLO, VISITOR!</h2>
             <p className='mb-4 text-white'>
               <span>

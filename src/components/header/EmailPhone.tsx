@@ -25,7 +25,7 @@ const EmailPhone = () => {
               lucas.lfs.souza@gmail.com
             </div>
             <button
-              className='text-green-500 text-xs border border-green-500 px-2 py-1 rounded cursor-pointer'
+              className='text-primary-green text-xs border border-green-500 px-2 py-1 rounded cursor-pointer'
               onClick={() => handleCopy('lucas.lfs.souza@gmail.com')}
             >
               Copy
@@ -43,7 +43,7 @@ const EmailPhone = () => {
           <div className='flex items-center justify-between'>
             <div className='text-white/40 text-xs mr-2'>+352691624730</div>
             <button
-              className='text-green-500 text-xs border border-green-500 px-2 py-1 rounded cursor-pointer'
+              className='text-primary-green text-xs border border-green-500 px-2 py-1 rounded cursor-pointer'
               onClick={() => handleCopy('+352691624730')}
             >
               Copy

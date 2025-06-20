@@ -67,7 +67,7 @@ const RecommendationCard = ({ data }: { data: RecommendationProps }) => {
 
         <button
           onClick={toggleModal}
-          className='text-green-500 mt-2 text-sm cursor-pointer transition-all duration-500 hover:scale-105 p-1'
+          className='text-primary-green mt-2 text-sm cursor-pointer transition-all duration-500 hover:scale-105 p-1'
         >
           View More
         </button>

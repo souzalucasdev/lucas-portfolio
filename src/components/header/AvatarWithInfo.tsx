@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const AvatarWithInfo = () => {
   return (
-    <div className='flex flex-col justify-center items-center mb-4 bg-white/2 p-4 rounded-t-xl'>
+    <div className='flex flex-col justify-center items-center mb-4 bg-second-dark p-4 rounded-t-xl sticky top-0 z-20'>
       <Image
         src='/lucas-profile.jpeg'
         alt='Lucas Souza'

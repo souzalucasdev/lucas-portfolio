@@ -11,6 +11,13 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+@theme {
+  --color-primary-green: oklch(0.7518 0.209 142.54);
+  --color-second-dark: oklch(0.175 0 264);
+  --color-third-dark: oklch(0.2175 0 264);
+  --color-fourth-dark: oklch(0.2556 0 264);
+  --color-custom-gray: oklch(0.4555 0 264);
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

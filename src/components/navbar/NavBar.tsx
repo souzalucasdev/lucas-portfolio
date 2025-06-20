@@ -55,7 +55,7 @@ const NavBar: React.FC<NavBarProps> = ({ className, toggleNavBarDrawer }) => {
         {!isMobile && (
           <>
             <MenuIcon
-              className='text-green-500 cursor-pointer'
+              className='text-primary-green cursor-pointer'
               onClick={toggleMenu}
             />
             <div className='flex justify-center items-center h-full'>

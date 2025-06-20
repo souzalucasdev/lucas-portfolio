@@ -44,7 +44,7 @@ const ContactForm = () => {
       </h3>
       <div className='flex flex-col gap-4'>
         <div className='p-2 flex w-full bg-black rounded-xl gap-4 border border-transparent focus-within:border-green-500 group'>
-          <PersonIcon className='text-white group-focus-within:text-green-500' />
+          <PersonIcon className='text-white group-focus-within:text-primary-green' />
           <input
             id='name'
             {...register('name', { required: 'Name is required' })}
@@ -58,7 +58,7 @@ const ContactForm = () => {
         )}
 
         <div className='p-2 flex w-full bg-black rounded-xl gap-4 border border-transparent focus-within:border-green-500 group'>
-          <Email className='text-white group-focus-within:text-green-500' />
+          <Email className='text-white group-focus-within:text-primary-green' />
           <input
             id='email'
             type='email'
@@ -79,7 +79,7 @@ const ContactForm = () => {
         )}
 
         <div className='p-2 flex w-full bg-black rounded-xl border border-transparent focus-within:border-green-500 group gap-4'>
-          <TextsmsIcon className='text-white group-focus-within:text-green-500' />
+          <TextsmsIcon className='text-white group-focus-within:text-primary-green' />
           <textarea
             id='message'
             placeholder='Message'
