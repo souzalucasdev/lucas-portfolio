@@ -82,6 +82,7 @@ const ContactForm = () => {
           <TextsmsIcon className='text-white group-focus-within:text-green-500' />
           <textarea
             id='message'
+            placeholder='Message'
             className='w-full bg-transparent text-white border-none focus:outline-none'
             {...register('message', { required: 'Message is required' })}
           />
