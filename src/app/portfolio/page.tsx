@@ -2,15 +2,15 @@
 
 import React from 'react';
 import { useDrawerContext } from '@/context/DrawerContext';
-
 import MobileMenu from '@/components/MobileMenu';
 import Header from '@/components/header/Header';
 import SlidingMenu from '@/components/navbar/SlidingMenu';
-import { Button, ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import theme from '@/mui/styles/theme';
 import NavBar from '@/components/navbar/NavBar';
+import Portfolio from './Portfolio';
 
-export default function Portfolio() {
+export default function PortfolioPage() {
   const {
     isHeaderOpen,
     isNavBarOpen,
@@ -20,10 +20,12 @@ export default function Portfolio() {
     toggleNavBarDrawer,
   } = useDrawerContext();
 
-  //   const blurBg =
-  //     isHeaderOpen || isNavBarOpen
-  //       ? 'blur-sm overflow-hidden'
-  //       : 'overflow-scroll';
+  const blurBg =
+    isHeaderOpen || isNavBarOpen
+      ? 'blur-sm overflow-hidden pointer-events-none'
+      : 'overflow-scroll';
+
+  console.log('isNavOpen: ', isNavBarOpen);
 
   return (
     <ThemeProvider theme={theme}>
@@ -32,7 +34,7 @@ export default function Portfolio() {
         toggleNavBarDrawer={toggleNavBarDrawer}
       />
       <div
-        className={`bg-black flex w-full h-screen lg:p-[0.8rem] flex-col md:flex-row gap-4`}
+        className={`bg-black flex w-screen h-screen lg:p-[0.8rem] flex-col md:flex-row gap-4`}
       >
         {isHeaderOpen && (
           <div
@@ -43,12 +45,8 @@ export default function Portfolio() {
           </div>
         )}
 
-        <Header className='md:flex md:w-[300px] hidden' />
-        <div className='w-full flex justify-center items-center text-bold text-white text-5xl flex-col'>
-          <span className='mb-8'>Ooooops... </span>
-          <span className='mb-8'>This page is not available yet...</span>
-          <Button href={'/'}>Back to HomePage</Button>
-        </div>
+        <Header className={`${blurBg} md:flex md:w-[300px] hidden`} />
+        <Portfolio className={blurBg} />
 
         {isNavBarOpen && (
           <div
