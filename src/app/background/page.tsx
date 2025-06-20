@@ -61,7 +61,10 @@ export default function Background() {
             />
           </div>
         )}
-        <NavBar className='md:flex md:w-[200px] hidden' />
+        <NavBar
+          className='md:flex md:w-[200px] hidden'
+          toggleNavBarDrawer={toggleNavBarDrawer}
+        />
       </div>
     </ThemeProvider>
   );
