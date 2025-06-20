@@ -22,10 +22,30 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
           &times;
         </button>
         <div className='flex flex-col'>
-          <LinkButton icon='home' link='/' label='Home' />
-          <LinkButton icon='contact' link='/contact' label='Contact' />
-          <LinkButton icon='background' link='/background' label='Background' />
-          <LinkButton icon='portfolio' link='/portfolio' label='Portfolio' />
+          <LinkButton
+            icon='home'
+            link='/'
+            label='Home'
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <LinkButton
+            icon='contact'
+            link='/contact'
+            label='Contact'
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <LinkButton
+            icon='background'
+            link='/background'
+            label='Background'
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <LinkButton
+            icon='portfolio'
+            link='/portfolio'
+            label='Portfolio'
+            onClick={() => setIsMenuOpen(false)}
+          />
         </div>
       </div>
     );

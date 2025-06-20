@@ -6,6 +6,9 @@ interface LinkButtonProps {
   label: string;
   link: string;
   icon: string;
+  onClick: (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => void;
 }
 
 const iconMapping: Record<string, React.ElementType> = {
@@ -15,7 +18,12 @@ const iconMapping: Record<string, React.ElementType> = {
   portfolio: Badge,
 };
 
-const LinkButton: React.FC<LinkButtonProps> = ({ label, link, icon }) => {
+const LinkButton: React.FC<LinkButtonProps> = ({
+  label,
+  link,
+  icon,
+  onClick,
+}) => {
   const [isMounted, setIsMounted] = useState(false);
 
   const [pathname, setPathname] = useState('');
@@ -30,7 +38,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ label, link, icon }) => {
   const IconComponent = iconMapping[icon];
 
   return (
-    <Link href={link} className=''>
+    <Link href={link} className='' onClick={onClick}>
       <div
         className={`flex items-center justify-start p-2 rounded-xl mb-4 ${
           isActive ? 'bg-green-500 text-black' : 'text-white'
