@@ -76,11 +76,10 @@ const RecommendationCard = ({ data }: { data: RecommendationProps }) => {
       {isModalOpen && (
         <div className='fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex justify-center items-center z-50 p-8 h-screen'>
           <div
-            className='bg-black p-6 rounded-lg max-w-lg w-full border border-white h-[80vh] overflow-scroll'
+            className='bg-black p-6 rounded-lg max-w-lg w-full border border-white h-100 overflow-scroll'
             ref={modalRef}
           >
-            <div className='flex justify-between items-center'>
-              <h2 className='text-xl font-bold'>Recommendation</h2>
+            <div className='flex justify-end items-center'>
               <button
                 onClick={toggleModal}
                 className='text-xl font-semibold text-white cursor-pointer'
