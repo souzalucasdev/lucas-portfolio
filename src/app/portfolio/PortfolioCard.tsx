@@ -31,8 +31,10 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ data }) => {
         alt={data.projectName}
         className='w-full h-40 object-cover rounded'
       />
-      <h3 className='mt-4 text-xl font-semibold'>{data.projectName}</h3>
-      <p className='mt-2 text-sm'>{data.projectDetail}</p>
+      <h3 className='mt-4 text-xl font-semibold text-white'>
+        {data.projectName}
+      </h3>
+      <p className='mt-2 text-sm text-white'>{data.projectDetail}</p>
       <div className='mt-2 flex flex-wrap gap-2'>
         {data.technologiesUsed.map((tech, index) => (
           <span

@@ -44,7 +44,9 @@ const Portfolio: React.FC<PortfolioProps> = ({ className = '' }) => {
       className={`${className} scrollbar-hidden w-full h-full flex text-white flex-col bg-white/10 rounded-xl p-4`}
     >
       <div className='w-full '>
-        <h2 className='mt-6 text-3xl font-bold text-left'>Portfolio</h2>
+        <h2 className='mt-6 text-3xl font-bold text-left text-white'>
+          Portfolio
+        </h2>
 
         <div className='grid w-full mt-6 grid-flow-row md:grid-cols-2 gap-x-4 gap-y-8 pb-8'>
           {data?.map((portfolio) => (
