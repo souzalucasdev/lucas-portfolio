@@ -61,7 +61,7 @@ const RecommendationCard = ({ data }: { data: RecommendationProps }) => {
         <div className='text-xs text-gray-400 italic mt-1'>
           {data?.designation}
         </div>
-        <div className='text-sm mt-2 text-gray-400 font-normal'>
+        <div className='text-sm mt-2 text-white font-normal'>
           {truncateText(data?.view || '', 150)}
         </div>
 
@@ -74,9 +74,9 @@ const RecommendationCard = ({ data }: { data: RecommendationProps }) => {
       </div>
 
       {isModalOpen && (
-        <div className='fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex justify-center items-center z-50 p-4'>
+        <div className='fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex justify-center items-center z-50 p-8 h-screen'>
           <div
-            className='bg-black p-6 rounded-lg max-w-lg w-full border border-white'
+            className='bg-black p-6 rounded-lg max-w-lg w-full border border-white h-[80vh] overflow-scroll'
             ref={modalRef}
           >
             <div className='flex justify-between items-center'>
@@ -96,9 +96,11 @@ const RecommendationCard = ({ data }: { data: RecommendationProps }) => {
                 height={100}
                 className='rounded-full'
               />
-              <p className='text-lg font-semibold mt-2'>{data?.name}</p>
+              <p className='text-lg font-semibold mt-2 text-white'>
+                {data?.name}
+              </p>
               <p className='text-gray-500 text-sm'>{data?.designation}</p>
-              <p className='text-sm mt-2'>{data?.view}</p>
+              <p className='text-sm mt-2 text-white'>{data?.view}</p>
             </div>
           </div>
         </div>
