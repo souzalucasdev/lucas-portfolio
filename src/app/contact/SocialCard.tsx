@@ -10,6 +10,7 @@ const SocialCard = () => {
       >
         <GitHub
           sx={{
+            color: 'white',
             fontSize: 40,
             cursor: 'pointer',
             transition: 'transform 0.3s ease-in-out',
@@ -27,6 +28,7 @@ const SocialCard = () => {
       >
         <LinkedIn
           sx={{
+            color: 'white',
             fontSize: 40,
             cursor: 'pointer',
             transition: 'transform 0.3s ease-in-out',
@@ -43,6 +45,7 @@ const SocialCard = () => {
       >
         <Mail
           sx={{
+            color: 'white',
             fontSize: 40,
             cursor: 'pointer',
             transition: 'transform 0.3s ease-in-out',

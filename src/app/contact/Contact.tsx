@@ -8,7 +8,7 @@ interface ContactProps {
 const Contact: React.FC<ContactProps> = ({ className }) => {
   return (
     <div
-      className={`${className} w-full flex flex-col gap-4 p-4 bg-white/10 rounded-xl`}
+      className={`${className} scrollbar-hidden w-full h-full flex flex-col gap-4 p-4 bg-white/10 rounded-xl`}
     >
       <div>
         <h3 className='text-left text-lg font-semibold text-white flex-start mb-4'>

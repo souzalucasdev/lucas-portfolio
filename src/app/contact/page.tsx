@@ -34,7 +34,7 @@ export default function ContactPage() {
         toggleNavBarDrawer={toggleNavBarDrawer}
       />
       <div
-        className={`bg-black flex w-screen h-screen lg:p-[0.8rem] flex-col md:flex-row gap-4 p-4`}
+        className={`bg-black flex w-screen h-screen lg:p-[0.8rem] flex-col md:flex-row gap-4`}
       >
         {isHeaderOpen && (
           <div
