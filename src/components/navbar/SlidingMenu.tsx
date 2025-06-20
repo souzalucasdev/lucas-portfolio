@@ -21,7 +21,7 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
         >
           &times;
         </button>
-        <div className='flex flex-col'>
+        <div className='flex flex-col w-full p-6'>
           <LinkButton
             icon='home'
             link='/'
@@ -34,12 +34,12 @@ const SlidingMenu = React.forwardRef<HTMLDivElement, SlidingMenuProps>(
             label='Contact'
             onClick={() => setIsMenuOpen(false)}
           />
-          <LinkButton
+          {/* <LinkButton
             icon='background'
             link='/background'
             label='Background'
             onClick={() => setIsMenuOpen(false)}
-          />
+          /> */}
           <LinkButton
             icon='portfolio'
             link='/portfolio'
