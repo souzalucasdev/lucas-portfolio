@@ -7,7 +7,7 @@ import { DrawerProvider } from '@/context/DrawerContext';
 
 interface NavBarProps {
   className?: string;
-  toggleNavBarDrawer: any;
+  toggleNavBarDrawer: (open: boolean) => void;
 }
 
 const NavBar: React.FC<NavBarProps> = ({ className, toggleNavBarDrawer }) => {
