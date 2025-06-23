@@ -11,7 +11,7 @@ const MobileMenu = ({
   toggleNavBarDrawer,
 }: MobileMenuProps) => {
   return (
-    <div className='md:hidden flex justify-between items-center p-2 bg-black'>
+    <div className='md:hidden flex justify-between items-center p-2 bg-second-dark'>
       <MoreVertIcon
         className='text-primary-green'
         onClick={toggleHeaderDrawer}
