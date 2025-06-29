@@ -54,6 +54,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ setIsBlurBg }) => {
       <form
         onSubmit={handleSubmit(onSubmit)}
         className='bg-black/30 rounded-xl p-4'
+        noValidate
       >
         <h3 className='text-white text-left text-lg font-semibold flex-start mb-4'>
           Get In Touch
@@ -84,7 +85,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ setIsBlurBg }) => {
               {...register('email', {
                 required: 'Email is required',
                 pattern: {
-                  value: /^\S+@\S+$/i,
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                   message: 'Invalid email address',
                 },
               })}
