@@ -20,6 +20,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ setIsBlurBg }) => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormData>();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMessageSent, setIsMessageSent] = useState(false);
@@ -39,6 +40,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ setIsBlurBg }) => {
       setIsMessageSent(false);
     }
     setIsModalOpen(true);
+    reset();
   };
   useEffect(() => {
     setIsBlurBg(isModalOpen);
