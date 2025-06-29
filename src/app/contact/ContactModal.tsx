@@ -38,23 +38,27 @@ const ContactModal: React.FC<ContactModalProps> = ({
 
       {status ? (
         <>
-          <h2 className='text-center font-bold my-4'>Message Sent!</h2>
+          <h2 className='text-white text-center font-bold my-4'>
+            Message Sent!
+          </h2>
           <TaskAltIcon
             className='text-primary-green'
             sx={{ fontSize: '8rem', marginBottom: '1rem' }}
           />
-          <p className='text-sm text-center mb-6'>
+          <p className='text-white text-sm text-center mb-6'>
             Thanks for your message. I will get back to you as fast as possible!
           </p>
         </>
       ) : (
         <>
-          <h2 className='text-center font-bold mb-4'>Something went wrong!</h2>
+          <h2 className='text-white text-center font-bold mb-4'>
+            Something went wrong!
+          </h2>
           <ErrorOutlineIcon
             className='text-red-600'
             sx={{ fontSize: '8rem', marginBottom: '1rem' }}
           />
-          <p className='text-sm text-center mb-6'>
+          <p className='text-white text-sm text-center mb-6'>
             You can still reach me out on Linkedin by hitting the button below
           </p>
           <Button href='https://linkedin.com/in/devlucassouza' target='_blank'>
