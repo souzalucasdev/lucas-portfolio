@@ -26,7 +26,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
 
   return createPortal(
     <div
-      className='absolute h-100 w-100 rounded-xl bg-second-dark border flex flex-col items-center p-8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10'
+      className='absolute h-100 w-100 rounded-xl bg-second-dark border border-white flex flex-col items-center p-8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10'
       ref={modalRef}
     >
       <button className='flex w-full justify-end items-start mb-4'>
