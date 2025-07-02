@@ -33,7 +33,7 @@ const Main: React.FC<MainProps> = ({ className }) => {
         <div
           className='w-full h-50 bg-cover bg-no-repeat bg-center flex flex-col relative'
           style={{
-            backgroundImage: "url('/background.png')",
+            backgroundImage: "url('/background.webp')",
           }}
         >
           <div className='bg-color-avocado-100 p-4 m-3 h-full rounded-xl'>
