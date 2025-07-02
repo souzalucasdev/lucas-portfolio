@@ -3,7 +3,6 @@ const Footer = () => (
     <div className='flex justify-between items-center max-w-7xl mx-auto px-6 text-center'>
       <p>&copy; 2025 Lucas Souza.</p>
       <p className=''>All rights reserved.</p>
-      <p className=''>All rights reserved.</p>
     </div>
   </footer>
 );
