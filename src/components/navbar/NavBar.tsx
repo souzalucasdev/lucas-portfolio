@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
-import SlidingMenu from './SlidingMenu';
-import MenuIcon from '@mui/icons-material/Menu';
-import { DrawerProvider } from '@/context/DrawerContext';
+import { useState, useEffect, useRef } from "react";
+import SlidingMenu from "./SlidingMenu";
+import MenuIcon from "@mui/icons-material/Menu";
+import { DrawerProvider } from "@/context/DrawerContext";
 
 interface NavBarProps {
   className?: string;
@@ -25,10 +25,10 @@ const NavBar: React.FC<NavBarProps> = ({ className, toggleNavBarDrawer }) => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize();
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const toggleMenu = () => {
@@ -43,8 +43,8 @@ const NavBar: React.FC<NavBarProps> = ({ className, toggleNavBarDrawer }) => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -55,17 +55,16 @@ const NavBar: React.FC<NavBarProps> = ({ className, toggleNavBarDrawer }) => {
         {!isMobile && (
           <>
             <MenuIcon
-              className='text-primary-green cursor-pointer'
+              className="text-primary-green cursor-pointer animate-grow-shrink"
               onClick={toggleMenu}
             />
-            <div className='flex justify-center items-center h-full'>
-              <span className='absolute rotate-90 text-gray-600 font-bold text-xl'>
+            <div className="flex justify-center items-center h-full">
+              <span className="absolute rotate-90 text-gray-600 font-bold text-xl">
                 NavBar
               </span>
             </div>
-
             {isMenuOpen && (
-              <div className='fixed top-0 right-0 z-50 w-64 bg-gray-900 p-4 h-full'>
+              <div className="fixed top-0 right-0 z-50 w-64 bg-gray-900 p-4 h-full">
                 <SlidingMenu
                   isMenuOpen={isMenuOpen}
                   setIsMenuOpen={setIsMenuOpen}

@@ -1,5 +1,5 @@
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import MenuIcon from '@mui/icons-material/Menu';
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import MenuIcon from "@mui/icons-material/Menu";
 
 interface MobileMenuProps {
   toggleHeaderDrawer: () => void;
@@ -11,12 +11,15 @@ const MobileMenu = ({
   toggleNavBarDrawer,
 }: MobileMenuProps) => {
   return (
-    <div className='md:hidden flex justify-between items-center p-2 bg-second-dark'>
+    <div className="md:hidden flex justify-between items-center p-2 bg-second-dark">
       <MoreVertIcon
-        className='text-primary-green'
+        className="text-primary-green animate-grow-shrink"
         onClick={toggleHeaderDrawer}
       />
-      <MenuIcon className='text-primary-green' onClick={toggleNavBarDrawer} />
+      <MenuIcon
+        className="text-primary-green animate-grow-shrink"
+        onClick={toggleNavBarDrawer}
+      />
     </div>
   );
 };
